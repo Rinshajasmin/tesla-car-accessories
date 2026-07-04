@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "TESLA Car Accessories",
+  name: "TESLA ",
   description:
     "Premium car accessories and professional installation services.",
 
