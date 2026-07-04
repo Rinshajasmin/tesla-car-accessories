@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import {SITE} from "@/constants/site";
 import { Menu } from "lucide-react";
 import { useState ,useEffect} from "react";
+import{THEME} from "@/constants/theme"
 import {
   Sheet,
   SheetContent,
@@ -23,32 +24,20 @@ const navItems = [
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
-    const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState("home");
 
-    useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+   
 
   return (
     
-<header
-  className={`fixed inset-x-0 top-0 z-50 border-b border-white/10 transition-all duration-300 ${
-    isScrolled
-      ? "bg-black/90 shadow-lg backdrop-blur-2xl"
-      : "bg-black/40 backdrop-blur-xl"
-  }`}
->    
+<header className="fixed inset-x-0 top-0 z-50 bg-black/10 backdrop-blur-xl border-b border-white/10 transition-all duration-300">
   <Container>
         <nav className="flex h-20 items-center justify-between">
-         <Link href="/" className="text-2xl font-bold tracking-wider">
-  {SITE.name}
+        <Link href="/" className="group tracking-wider">
+  <span className={`text-3xl font-extrabold     ${THEME.colors.brandGradient}
+ bg-clip-text text-transparent drop-shadow-[0_0_12px_rgba(239,68,68,0.5)] transition-all duration-500 group-hover:drop-shadow-[0_0_20px_rgba(239,68,68,0.8)]`}>
+    {SITE.name}
+  </span>
 </Link>
 
           <ul className="hidden items-center gap-8 md:flex">
@@ -61,7 +50,7 @@ export default function Navbar() {
     activeSection === item.id
       ? "text-white"
       : "text-zinc-300 hover:text-white"
-  } after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-orange-500 after:transition-all after:duration-300 ${
+  } after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:bg-red-600 after:transition-all after:duration-300 ${
     activeSection === item.id
       ? "after:w-full"
       : "after:w-0 hover:after:w-full"

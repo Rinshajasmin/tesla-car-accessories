@@ -1,4 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/hero"
+import About from "@/components/sections/about"
+
 
 export default function Home() {
   return (
@@ -6,9 +9,8 @@ export default function Home() {
       <Navbar />
 
       <main className="min-h-screen pt-20">
-        <h1 className="text-center text-5xl font-bold">
-          TESLA Car Accessories
-        </h1>
+        <Hero/>
+        <About/>
       </main>
     </>
   );
