@@ -6,8 +6,10 @@ export const THEME = {
     brandText:
       "text-red-500",
 
+    
+
     brandShadow:
-      "shadow-[0_0_20px_rgba(239,68,68,0.35)]",
+    "shadow-[0_0_25px_rgba(239,68,68,0.35)] hover:shadow-[0_0_45px_rgba(239,68,68,0.6)]",
 
     brandShadowHover:
       "hover:shadow-[0_0_30px_rgba(239,68,68,0.6)]",

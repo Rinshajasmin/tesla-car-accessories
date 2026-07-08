@@ -1,95 +1,43 @@
-import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 
-import ServiceFeature from "@/components/ui/serviceFeature";
-const services = [
-  {
-    title: "Premium Car & Bike Accessories",
-    image: "/images/about1.png",
-    description:
-      "Enhance your driving experience with professionally installed premium accessories designed for comfort, safety, and style.",
-
-    features: [
-      "Android Stereo Installation",
-      "Reverse Camera",
-      "Premium Audio Systems",
-      "Ambient Lighting",
-      "LED Headlights",
-      "Seat Covers & Floor Mats",
-    ],
-  },
-
-  {
-    title: "Advanced Key Programming",
-    image: "/images/about2.png",
-    description:
-      "Professional key programming and advanced automotive electronic solutions using industry-grade diagnostic equipment.",
-
-    features: [
-      "Smart Key Programming",
-      "Remote Programming",
-      "ECM Programming",
-      "BCM Programming",
-      "Sensor Programming",
-      "Immobilizer Solutions",
-    ],
-  },
-
-  {
-    title: "Hydrogen Engine Decarbonising",
-    image: "/images/about3.png",
-    description:
-      "Modern hydrogen-oxygen engine cleaning technology that restores engine performance and improves efficiency.",
-
-    features: [
-      "Hydrogen Carbon Cleaning",
-      "Improved Fuel Economy",
-      "Reduced Emissions",
-      "Better Engine Performance",
-      "Smooth Engine Operation",
-      "Extended Engine Life",
-    ],
-  },
-];
 export default function About() {
   return (
-    <section id="about" className="bg-[#090909] py-28">
+    <section
+      id="about"
+      className="bg-[#090909] py-32"
+    >
       <Container>
-       <>
-  {/* Heading */}
-  <div className="mx-auto mb-20 max-w-3xl text-center">
-    <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-red-500">
-      About Tesla
-    </p>
+       <div className="mx-auto max-w-5xl text-center">
+<p className="mb-4 uppercase tracking-[0.35em] text-red-500">
+  ABOUT TESLA
+</p>
+<h2 className="text-4xl font-bold leading-tight text-white md:text-5xl">
+Here's our story,  <br />
+  Trusted for Over 25 Years.
+</h2>
+<p className="mx-auto mt-10 max-w-3xl text-lg leading-9 text-zinc-400">
+  What began as a small car accessories and key programming shop in a single
+  room has grown into one of the region's trusted automotive solution centers.
 
-    <h2 className="text-4xl font-bold text-white md:text-5xl">
-      Complete Automotive Solutions
-    </h2>
+  <br />
+  <br />
 
-    <p className="mt-6 text-lg leading-8 text-zinc-400">
-      Tesla specializes in premium automotive accessories,
-      advanced key programming, and hydrogen-oxygen engine
-      decarbonising. We combine cutting-edge technology with
-      skilled craftsmanship to deliver reliable solutions for
-      every vehicle.
-    </p>
-  </div>
+  Since <span className="font-semibold text-white">2000</span>, Tesla has
+  expanded through dedication, honest workmanship, and the trust of thousands
+  of customers. Today, our workshop spans{" "}
+  <span className="font-semibold text-white">4+ rooms</span>, offering premium
+  accessories, advanced key programming, and modern hydrogen engine
+  decarbonising services.
 
-  <div className="space-y-32">
-  {services.map((service, index) => (
-    <ServiceFeature
-      key={service.title}
-      title={service.title}
-      description={service.description}
-      image={service.image}
-      features={service.features}
-      reverse={index % 2 !== 0}
-    />
-  ))}
-</div>
+  <br />
+  <br />
 
+  Every vehicle that enters our workshop receives the same level of precision
+  and care that helped us grow from our very first customer to the thousands we
+  proudly serve today.
+</p>
 
-</>
+    </div>
       </Container>
     </section>
   );

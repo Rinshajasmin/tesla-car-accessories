@@ -37,7 +37,9 @@ export default function ServiceFeature({
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="relative h-[420px] overflow-hidden rounded-3xl"
+        className="relative h-[420px] overflow-hidden rounded-3xl group hover:-translate-y-2 transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] hover:-translate-y-2
+
+hover:shadow-[0_0_35px_rgba(239,68,68,0.35)]"
       >
         <Image
           src={image}
