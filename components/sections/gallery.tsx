@@ -1,8 +1,15 @@
+"use client"
 import { Container } from "@/components/ui/Container";
 import GalleryCard from "@/components/ui/galleryCard";
-import { GALLERY } from "@/constants/gallery";
+import { GALLERY ,type GalleryItem } from "@/constants/gallery";
+import GalleryLightbox from "@/components/ui/galleryLightbox";
+import { useState } from "react";
 
 export default function Gallery() {
+
+  const [selectedIndex, setSelectedIndex] =
+  useState<number | null>(null);
+  
   return (
     <section
       id="gallery"
@@ -26,15 +33,40 @@ export default function Gallery() {
   </p>
 </div>
 <div className="columns-1 gap-6 space-y-6 md:columns-2 lg:columns-3">
-  {GALLERY.map((item) => (
+  {GALLERY.map((item,index) => (
     <GalleryCard
       key={item.id}
       image={item.image}
-      title={item.title}
+        
+
       size={item.size}
+onClick={() => setSelectedIndex(index)}
     />
   ))}
 </div>
+<GalleryLightbox
+  images={GALLERY}
+  currentIndex={selectedIndex}
+  onClose={() => setSelectedIndex(null)}
+  onPrevious={() =>
+    setSelectedIndex((prev) =>
+      prev === null
+        ? null
+        : prev === 0
+        ? GALLERY.length - 1
+        : prev - 1
+    )
+  }
+  onNext={() =>
+    setSelectedIndex((prev) =>
+      prev === null
+        ? null
+        : prev === GALLERY.length - 1
+        ? 0
+        : prev + 1
+    )
+  }
+/>
 
       </Container>
     </section>
