@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "TESLA Car Accessories",
   description:
     "Premium car accessories and professional installation services.",
+    icons: {
+    icon: "/icon5.png",
+  },
 };
 
 export default function RootLayout({
