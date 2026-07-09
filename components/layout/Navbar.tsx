@@ -32,8 +32,9 @@ export default function Navbar() {
         });
       },
       {
-rootMargin: "-120px 0px -55% 0px",
-  threshold: 0,      },
+        rootMargin: "-120px 0px -55% 0px",
+        threshold: 0,
+      },
     );
 
     sections.forEach((section) => {
@@ -65,7 +66,7 @@ rootMargin: "-120px 0px -55% 0px",
               <li key={item.label}>
                 <Link
                   href={item.href}
-                  onClick={() => setActiveSection(item.id)}
+
                   className={`relative text-sm font-medium transition-all duration-300 ${
                     activeSection === item.id
                       ? "text-white"
@@ -93,21 +94,7 @@ rootMargin: "-120px 0px -55% 0px",
 
             <SheetContent
               side="right"
-              className="
- mt-5
-    mr-4
-    h-auto
-    max-h-[420px]
-    w-[260px]
-    rounded-3xl
-    border
-    border-white/10
-    bg-black/40
-    backdrop-blur-2xl
-    p-0
-    overflow-hidden
-    
-  "
+              className=" mt-5 mr-4 h-auto max-h-[420px] w-[260px] rounded-3xl border border-white/10 bg-black/40 backdrop-blur-2xl p-0 overflow-hidden"
             >
               <div className="py-8">
                 <nav className="flex flex-col py-6">
@@ -115,20 +102,21 @@ rootMargin: "-120px 0px -55% 0px",
                     <Link
                       key={item.label}
                       href={item.href}
+                      scroll={false}
+
                       onClick={() => {
                         setOpen(false);
-                        setActiveSection(item.id);
                       }}
 
                       className="
-        py-3
-        text-center
-        text-lg
-        font-medium
-        text-zinc-300
-        transition
-        hover:text-red-500
-      "
+                       py-3
+                       text-center
+                       text-lg
+                       font-medium
+                       text-zinc-300
+                       transition
+                      hover:text-red-500
+                     "
                     >
                       {item.label}
                     </Link>

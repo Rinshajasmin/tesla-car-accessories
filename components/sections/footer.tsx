@@ -6,7 +6,7 @@ import { SITE } from "@/constants/site";
 import { THEME } from "@/constants/theme";
 
 const links = [
-  { name: "Home", href: "#hero" },
+  { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
   { name: "Services", href: "#services" },
   { name: "Gallery", href: "#gallery" },
