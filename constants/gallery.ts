@@ -1,32 +1,32 @@
 export type GalleryItem = {
   id: number;
   image: string;
-  
+
   size: "large" | "small";
 };
-export const GALLERY : GalleryItem[] = [
+export const GALLERY: GalleryItem[] = [
   {
     id: 1,
     image: "/images/gallery/gallery3.jpeg",
-    
+
     size: "large",
   },
   {
     id: 2,
     image: "/images/gallery/gallery4.jpeg",
-    
+
     size: "small",
   },
   {
     id: 3,
     image: "/images/gallery/gallery5.jpeg",
-    
+
     size: "small",
   },
   {
     id: 4,
     image: "/images/gallery/decarb1.jpeg",
-     
+
     size: "large",
   },
   {
@@ -34,7 +34,7 @@ export const GALLERY : GalleryItem[] = [
     image: "/images/gallery/decarb6.jpeg",
     size: "small",
   },
-   {
+  {
     id: 6,
     image: "/images/gallery/gallery6.jpeg",
     size: "small",
@@ -107,7 +107,7 @@ export const GALLERY : GalleryItem[] = [
   {
     id: 20,
     image: "/images/gallery/gallery5.jpeg",
-    
+
     size: "large",
   },
   {
@@ -130,5 +130,4 @@ export const GALLERY : GalleryItem[] = [
     image: "/images/gallery/decarb6.jpeg",
     size: "small",
   },
-  
 ];

@@ -5,21 +5,20 @@ import { motion } from "framer-motion";
 
 type GalleryCardProps = {
   image: string;
-  
-  size: "large" | "small";
-    onClick: () => void;
 
+  size: "large" | "small";
+  onClick: () => void;
 };
 
 export default function GalleryCard({
   image,
-  
+
   size,
   onClick,
 }: GalleryCardProps) {
   return (
     <motion.div
-        onClick={onClick}
+      onClick={onClick}
 
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -39,11 +38,7 @@ export default function GalleryCard({
         hover:-translate-y-2
         hover:shadow-[0_0_35px_rgba(239,68,68,0.35)]
 
-        ${
-         size === "large"
-  ? "h-[520px]"
-  : "h-[320px]"
-        }
+        ${size === "large" ? "h-[520px]" : "h-[320px]"}
       `}
     >
       {/* Image */}
@@ -79,9 +74,7 @@ export default function GalleryCard({
       {/* Title */}
 
       <div className="absolute bottom-6 left-6">
-        <h3 className="text-xl font-semibold text-white">
-          
-        </h3>
+        <h3 className="text-xl font-semibold text-white"></h3>
       </div>
     </motion.div>
   );

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk } from "next/font/google";
+import FloatingWhatsApp from "@/components/ui/floatingWhatsApp";
 import "./globals.css";
 
 const inter = Inter({
@@ -27,7 +28,10 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${inter.variable} ${spaceGrotesk.variable} h-full scroll-smooth antialiased`}    >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col min-h-screen overflow-x-hidden">{children}
+          <FloatingWhatsApp />
+
+      </body>
     </html>
   );
 }

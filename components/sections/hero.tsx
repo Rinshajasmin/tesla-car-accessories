@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
@@ -76,32 +77,36 @@ export default function Hero() {
             }}
             className="mt-10 flex flex-col gap-4 sm:flex-row"
           >
-            <Button
-              size="lg"
-              className={`h-14 
-                rounded-full
-    ${THEME.colors.brandGradient}
-    px-8
-    text-base
-    font-semibold
-    text-white
-    shadow-[0_0_20px_rgba(239,68,68,0.35)]
-    transition-all
-    duration-300
-    hover:scale-105
-    hover:shadow-[0_0_30px_rgba(239,68,68,0.6)]
-   `}
-            >
-              Explore Services
-            </Button>
+            <Link href="#services">
+              <Button
+                size="lg"
+                className={`h-14
+      rounded-full
+      ${THEME.colors.brandGradient}
+      px-8
+      text-base
+      font-semibold
+      text-white
+      shadow-[0_0_20px_rgba(239,68,68,0.35)]
+      transition-all
+      duration-300
+      hover:scale-105
+      hover:shadow-[0_0_30px_rgba(239,68,68,0.6)]
+    `}
+              >
+                Explore Services
+              </Button>
+            </Link>
 
-            <Button
-              size="lg"
-              variant="outline"
-              className="h-14 rounded-full border-white/20 bg-white/5 px-8 text-base text-white backdrop-blur-md hover:bg-white/10"
-            >
-              Connect
-            </Button>
+            <Link href="#contact">
+              <Button
+                size="lg"
+                variant="outline"
+                className="h-14 rounded-full border-white/20 bg-white/5 px-8 text-base text-white backdrop-blur-md hover:bg-white/10"
+              >
+                Connect
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </Container>

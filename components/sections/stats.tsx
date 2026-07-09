@@ -1,12 +1,7 @@
 "use client";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
-import {
-  Wrench,
-  KeyRound,
-  Car,
-  ShieldCheck,
-} from "lucide-react";
+import { Wrench, KeyRound, Car, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 
 const stats = [
@@ -34,7 +29,7 @@ const stats = [
   {
     icon: ShieldCheck,
     value: 100,
-        suffix: "%",
+    suffix: "%",
 
     title: "Trusted",
     subtitle: "Quality",
@@ -46,7 +41,6 @@ export default function Stats() {
     <section className="bg-[#090909] py-10">
       <Container>
         <div className="grid overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] md:grid-cols-2 lg:grid-cols-4">
-
           {stats.map((item, index) => {
             const Icon = item.icon;
 
@@ -69,22 +63,18 @@ export default function Stats() {
                 <Icon className="mb-4 h-8 w-8 text-red-500" />
 
                 <h3 className="text-3xl font-bold text-white">
-  <CountUp
-    end={item.value}
-    duration={2}
-    suffix={item.suffix}
-    enableScrollSpy
-    scrollSpyOnce
-  />
-</h3>
+                  <CountUp
+                    end={item.value}
+                    duration={2}
+                    suffix={item.suffix}
+                    enableScrollSpy
+                    scrollSpyOnce
+                  />
+                </h3>
 
-                <p className="mt-2 text-sm text-zinc-300">
-                  {item.title}
-                </p>
+                <p className="mt-2 text-sm text-zinc-300">{item.title}</p>
 
-                <p className="text-sm text-zinc-500">
-                  {item.subtitle}
-                </p>
+                <p className="text-sm text-zinc-500">{item.subtitle}</p>
               </motion.div>
             );
           })}
